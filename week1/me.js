@@ -79,4 +79,9 @@ console.log(`in fact, I have two! Lastly, my favorite season is ${favoriteSeason
             to a single data type, so if the number changes to a string later during
             runtime, it will just convert to a string.
     4. Why is it helpful to plan data types before coding?
+        a: it's helpful to plan data types ahead of time because then
+            you can determine how this data is used, do we even need to store
+            specific values or can we just return its calculated value without 
+            the need to store it. It's also helpful to keep track of what you're
+            working with and making sure the names and types are consistent.
 */
