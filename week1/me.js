@@ -58,3 +58,25 @@ let isStudent = true;
 */
 
 // Step 5 -- Display facts using template literals
+console.log(`\nHi there! My name is ${NAME} and I'm ${myAge} years old.`);
+console.log(`I am ${isStudent ? "a student at JCCC" : "not a student anywhere"}.`);
+console.log(`Some facts about me: my favorite color is a ${favoriteColor}, `);
+console.log(`I really like ${favoriteFood}, my favorite animal are ${favoriteAnimal};`);
+console.log(`in fact, I have two! Lastly, my favorite season is ${favoriteSeason}.\n`);
+
+//Step 6 -- Questions
+/*
+    1. Which data type was easiest to choose? Why?
+        a: I think any of the string types, because I was writing names of things
+            it was very clear that it required strings.
+    2. Which variable was hardest to decide a data type for?
+        a: I didn't necessarily have a hard time with any of the data types,
+            but I had a thought about using a string for myAge to store the value
+            "23 years old", but I realized, what if I needed my age to calculate
+            values later? It then became an int.
+    3. What happens if a number is stored as a string in JavaScript?
+        a: JavaScript is a dynamically typed language and variables are not bound
+            to a single data type, so if the number changes to a string later during
+            runtime, it will just convert to a string.
+    4. Why is it helpful to plan data types before coding?
+*/
