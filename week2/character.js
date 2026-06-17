@@ -1,16 +1,43 @@
 // Kris Lee 6/16/2026
 "use strict";
 
-// Introduction message
-alert("Welcome Kris, to the floating sky city! Let's start with creating your character.");
+// introduction message
+alert("Welcome traveller... to Aerova, the floating sky city! I am Kris, your guide and I will help you create your hero.");
+const charName = prompt("What is your name, traveller?", "Traveller") || "Wanderer";
+let hasPets = confirm("Do you have any pets?");
 
-// Grab user's character name
-let namePrompt = prompt("What will you name your character?", "Wanderer");
-const charName = (namePrompt == null || namePrompt == "" ? "Wanderer" : namePrompt);
+if (hasPets) {
+    const petType = prompt(`What kind of pet do you have ${charName}? (e.g. Cat, Wolf, Dragon, etc.)`, "companion") || "Cat";
+    const petName = prompt(`Excellent, ${charName}. What is your ${petType}'s name?`, "pet name") || "Meat";
+} else {
+    alert("Ah, I see you're a loner.");
+}
 
-alert(charName);
+let hasPowers = confirm(`Do you have any powers, ${charName}? Like magic, super strength, or extreme luck?`);
 
-// Create pet/companion
-const petName = prompt(`What type of companion does ${charName} have? (e.g. Cat, Wolf, Dragon, Fairy, etc.)`);
+if (hasPowers) {
+    const superPower = prompt(`What is your super power, ${charName}?`, "Blood Manipulation") || "Super Unlucky";
+    const trainingYearsText = prompt(`How many years have you been training your skill, ${superPower}?`, 0) || 0;
+    const trainingYears = parseInt(trainingYearsText);
+    console.log(trainingYearsText, typeof trainingYearsText);
+    console.log(trainingYears, typeof trainingYears);
+    const powerLevel = trainingYears * 10;
+} else {
+    alert("So you're... useless?");
+}
 
-alert(petName);
+const likesFighting = confirm(`Well... ${charName}, do you like fighting monsters? Click OK for YES, CANCEL for NO.`);
+console.log(likesFighting, typeof likesFighting);
+
+alert(`Gathering magic for ${charName}... almost ready!`);
+alert(`
+    ================================================
+    Name: ${charName}
+    Pet: ${hasPets ? `${petName}` : "No pets"}
+    Superpower: ${superPower}
+    Power Level: ${powerLevel}
+    Monster Fighter: ${likesFighting ? "Yes" : "No"}
+    ================================================
+    Aerova has been succumbed by darkness, but ${charName} arose! Their potential to vanquish darkness ${hasPets ? `with their companion, ${petName} at their side.` : "through pure determination."}
+    ${hasPowers ? `With ${superPower}` : "without any powers"}, you will save us from the evil that engulfed Aerova...
+    `)
